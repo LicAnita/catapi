@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+}
+
+header,
+main,
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+header {
+  background: linear-gradient(
+    to bottom,
+    rgb(114, 215, 166),
+    rgba(227, 239, 233, 0.7)
+  );
+  position: fixed;
+  z-index: 100;
+}
+
+h1 {
+  margin: auto;
+  margin-left: 10px;
+}
+
+button {
+  border: none;
+  border-left: double rgb(46, 85, 66);
+  padding: 10px;
+  background-color: rgba(114, 215, 166, 0.545);
+  transition: background-color 0.5s, text-shadow 0.5s;
+}
+
+button:hover {
+  background-color: rgb(81, 212, 149);
+  text-shadow: 0.5px 0.5px rgb(46, 85, 66);
+  cursor: pointer;
+}
+
+main {
+  background-color: rgb(227, 239, 233);
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-top: 30px;
+}
+
+.cat-container {
+  margin: 1%;
+  flex: 1 1 20%;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, width 0.3s ease;
+
+}
+
+.cat-container:hover {
+  transform: scale(1.5);
+  z-index: 99;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 5%;
+}
+
+footer {
+  align-items: center;
+  background: linear-gradient(
+    to top,
+    rgb(114, 215, 166),
+    rgba(227, 239, 233, 0.7)
+  );
+}
+
+p {
+  margin-left: 10px;
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 900px) {
+  .cat-container {
+    flex: 1 1 48%; /* Se ajusta al 48% para dos columnas */
+  }
+}
+
+@media (max-width: 600px) {
+  .cat-container {
+    flex: 1 1 100%; /* Se ajusta al 100% para una columna */
+  }
+}
