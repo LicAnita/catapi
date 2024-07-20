@@ -43,6 +43,7 @@ button:hover {
 main {
   width: 100%;
   background-color: rgb(227, 239, 233);
+  padding: 10px;
   padding-top: 40px;
   columns: 4;
   column-gap: 10px;
@@ -53,8 +54,6 @@ main {
   margin-bottom: 10px;
   break-inside: avoid;
 }
-
-
 
 .cat-container img {
   max-width: 100%;
