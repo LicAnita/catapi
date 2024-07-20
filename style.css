@@ -1,9 +1,10 @@
 * {
   margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
 }
 
 header,
-main,
 footer {
   width: 100%;
   display: flex;
@@ -40,34 +41,31 @@ button:hover {
 }
 
 main {
-  background-color: rgb(227, 239, 233);
-  display: flex;
-  flex-wrap: wrap;
   width: 100%;
-  padding-top: 30px;
+  background-color: rgb(227, 239, 233);
+  padding-top: 40px;
+  columns: 4;
+  column-gap: 10px;
 }
 
 .cat-container {
-  margin: 1%;
-  flex: 1 1 20%;
   width: 100%;
-  height: auto;
-  padding: 20px;
-  box-sizing: border-box;
-  transition: transform 0.3s ease, width 0.3s ease;
-
+  margin-bottom: 10px;
+  break-inside: avoid;
 }
 
-.cat-container:hover {
+
+
+.cat-container img {
+  max-width: 100%;
+  border-radius: 5%;
+  transition: transform 0.3s ease, width 0.3s ease;
+}
+
+.cat-container img:hover {
   transform: scale(1.5);
   z-index: 99;
-}
-
-img {
-  width: 100%;
-  height: auto;
-  border-radius: 5%;
-}
+} 
 
 footer {
   align-items: center;
@@ -82,15 +80,23 @@ p {
   margin-left: 10px;
 }
 
-/* Media query para pantallas más pequeñas */
-@media (max-width: 900px) {
-  .cat-container {
-    flex: 1 1 48%; /* Se ajusta al 48% para dos columnas */
+@media (max-width: 1200px){
+  main{
+    columns: 3;
+
   }
 }
 
-@media (max-width: 600px) {
-  .cat-container {
-    flex: 1 1 100%; /* Se ajusta al 100% para una columna */
+@media (max-width: 768px){
+  main{
+    columns: 2;
+
+  }
+}
+
+@media (max-width: 548px){
+  main{
+    columns: 1;
+
   }
 }
